@@ -1,0 +1,110 @@
+body {
+  background-color : #efefef;
+}
+
+.box-2, .box-4 {
+  background-color : #2b8ead;
+}
+
+.box-1, .box-8 {
+  background-color : #6f98a8;
+}
+
+.box-7, .box-6 {
+  background-color : #bfbfbf;
+}
+
+.box-3, .box-5, .box-9 {
+  background-color : #2f454e;
+}
+
+.main-container {
+  display : grid;
+  grid-template-columns : auto auto;
+  justify-content : center;
+}
+
+#box-container {
+  display : grid;
+  grid-template-columns : auto auto auto;
+}
+
+#box-container > div.main {
+  color : white;
+  display : flex;
+  font-size : 100px;
+  height : 200px;
+  line-height : 200px;
+  margin : 0;
+  min-width : 200px;
+  text-align : center;
+}
+
+#button-container {
+  grid-row : initial;
+  display : flex;
+  flex-direction : column;
+}
+
+.mobile-icon {
+  width : 0;
+}
+
+.title {
+  background-color : none;
+  width : 100%;
+}
+
+footer {
+  text-align : center;
+}
+
+button {
+  background-color : #72c3dc;
+  border : 1px solid #3333;
+  border-radius : 5px;
+  box-shadow : 0 1px 1px 1px rgb(0 0 0 / 20%);
+  height : 50px;
+  margin : 10px;
+  width : 200px;
+}
+
+@media only screen and ( max-width : 375px ) {
+  body {
+    background-color : #ffff;
+  }
+
+  .main-container {
+    display : grid;
+    grid-template-columns : 100%;
+  }
+
+  #box-container {
+    grid-template-columns : auto;
+    width : 100%;
+  }
+
+  #box-container > div.main {
+    color : #0000;
+    font-size : 20px;
+    height : 50px;
+    line-height : 50px;
+    margin-bottom : 5px;
+    min-width : 100%;
+  }
+
+  #button-container {
+    grid-row : 1;
+    flex-direction : row;
+    justify-content : center;
+  }
+
+  .mobile-icon {
+    width : 20px;
+  }
+
+  #box-container .main div.title {
+    background-color : #efefef;
+    color : black;
+  }
+}
